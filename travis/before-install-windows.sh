@@ -1,5 +1,5 @@
 #!/bin/bash
-powershell -f "./msvc-setup.ps1"
+powershell -f "msvc-setup.ps1"
 powershell refreshenv
 
 choco install buck
