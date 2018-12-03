@@ -29,4 +29,6 @@ before_install:
  - ./travis/before-install-$TRAVIS_OS_NAME.sh
 
 script:
+  - echo $PATH
+  - echo $JAVA_HOME
   - buck build -c ui.superconsole=DISABLED :bzip2
