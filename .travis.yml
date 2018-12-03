@@ -29,7 +29,7 @@ before_install:
  - ./travis/before-install-$TRAVIS_OS_NAME.sh
 
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then source ~/.bash_profile   ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then export JAVA_HOME="/c/Program Files/Java/jdk1.8.0_191"   ; fi
   - echo $PATH
   - echo $JAVA_HOME
   - buck build -c ui.superconsole=DISABLED :bzip2
