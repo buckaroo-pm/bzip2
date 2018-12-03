@@ -3,7 +3,7 @@ choco install buck
 
 powershell refreshenv
 
-powershell -f "vscode-setup.ps1"
+powershell -f "./msvc-setup.ps1"
 
 powershell refreshenv
 
