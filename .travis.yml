@@ -15,6 +15,9 @@ addons:
     packages: 
       - buck
 
+jdk:
+  - openjdk8
+
 os:
   - windows
   - linux
