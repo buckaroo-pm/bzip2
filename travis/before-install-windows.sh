@@ -1,4 +1,5 @@
 #!/bin/bash
+powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 powershell "Install-Module -Name PSCX -AllowClobber"
 powershell "Install-Module -Name VSSetup -AllowClobber"
 powershell "Import-VisualStudioVars 2017 amd64"
