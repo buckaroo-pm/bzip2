@@ -25,4 +25,4 @@ before_install:
 - gcc --version
 
 script:
-- buck build :bzip2
+- buck build -c ui.superconsole=DISABLED :bzip2
