@@ -24,7 +24,7 @@ os:
   - osx
 
 before_install:
- - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./travis/before-install-linux.sh     ; fi
+ - ./travis/before-install-$TRAVIS_OS_NAME.sh
 
 script:
   - buck build -c ui.superconsole=DISABLED :bzip2
