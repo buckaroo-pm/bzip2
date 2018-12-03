@@ -9,6 +9,11 @@ addons:
     packages:
       - g++-6
       - gcc-6
+  homebrew:
+    taps:
+      - facebook/fb
+    packages: 
+      - buck
 
 os:
   - windows
@@ -16,18 +21,7 @@ os:
   - osx
 
 before_install:
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
-  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 90
-  - sudo apt-get install -y equivs openjdk-8-jdk
-  - wget -O buck.deb https://github.com/facebook/buck/releases/download/v2018.08.27.01/buck.2018.08.27.01_all.deb
-  - sudo dpkg -i buck.deb
-  - buck --version
-  - wget -O buckaroo.deb https://github.com/LoopPerfect/buckaroo/releases/download/v1.4.1/buckaroo.deb
-  - sudo dpkg -i buckaroo.deb
-  - buckaroo version
-  - c++ --version
-  - g++ --version
-  - gcc --version
+ - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./travis/before-install-linux.sh     ; fi
 
 script:
   - buck build -c ui.superconsole=DISABLED :bzip2
