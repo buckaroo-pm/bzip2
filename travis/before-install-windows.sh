@@ -3,7 +3,6 @@ choco install buck
 
 powershell refreshenv
 
-powershell "Set-PSRepository -Name PSGallery -InstallationPolicy Trusted"
 powershell "Install-Module –Name PowerShellGet"
 powershell "Install-Module -Name PSCX -AllowClobber"
 powershell "Install-Module -Name VSSetup -AllowClobber"
