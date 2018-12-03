@@ -1,0 +1,10 @@
+[project]
+  ignore = .git
+
+[cxx]
+  untracked_headers = warn
+  untracked_headers_whitelist = /usr/include/.*, /usr/lib/gcc/.*
+  should_remap_host_platform = true
+
+[parser]
+  default_build_file_syntax = SKYLARK
