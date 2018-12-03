@@ -1,5 +1,8 @@
 #!/bin/bash
-powershell -f "msvc-setup.ps1"
+powershell "Install-Module -Name PSCX -AllowClobber"
+powershell "Install-Module -Name VSSetup -AllowClobber"
+powershell "Import-VisualStudioVars 2017 amd64"
+
 powershell refreshenv
 
 choco install buck
