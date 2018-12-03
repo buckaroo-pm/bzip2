@@ -3,11 +3,7 @@ choco install buck
 
 powershell refreshenv
 
-powershell "Import-Module PowerShellGet and Set-PSRepository -Name PSGallery -InstallationPolicy Trusted"
-powershell "Install-Module –Name PowerShellGet"
-powershell "Install-Module -Name PSCX -AllowClobber"
-powershell "Install-Module -Name VSSetup -AllowClobber"
-powershell "Import-VisualStudioVars 2017 amd64"
+powershell -f "vscode-setup.ps1"
 
 powershell refreshenv
 
