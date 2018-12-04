@@ -1,4 +1,6 @@
 #!/bin/bash
+choco install visualstudio2017-workload-vctools 
+
 powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
 powershell "Install-Module -Name PSCX -AllowClobber -Force"
 powershell "Install-Module -Name VSSetup -AllowClobber -Force"
