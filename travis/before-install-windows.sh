@@ -12,6 +12,7 @@ cl
 
 powershell "cl"
 
+choco install mingw
 choco install buck
 
 powershell refreshenv
