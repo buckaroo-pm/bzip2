@@ -1,0 +1,11 @@
+[mingw]
+  prefix = /usr/local/bin/i686-w64-mingw32
+
+[cxx]
+  should_remap_host_platform = true
+  cc = $(config mingw.prefix)-gcc
+  cpp = $(config mingw.prefix)-cpp
+  ld = $(config mingw.prefix)-ld
+  ar = $(config mingw.prefix)-ar
+  ;; archiver_platform = WINDOWS
+  ;; linker_platform = WINDOWS
