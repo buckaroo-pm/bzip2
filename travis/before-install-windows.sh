@@ -1,10 +1,4 @@
 #!/bin/bash
-echo $VSAPPIDDIR
-
-powershell "echo %VSAPPIDDIR%"
-
-powershell "$VSAPPIDDIR/Tools/vsdevcmd/ext/vcvars.bat amd64"
-
 powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
 powershell "Install-Module -Name PSCX -AllowClobber -Force"
 powershell "Install-Module -Name VSSetup -AllowClobber -Force"
@@ -12,7 +6,7 @@ powershell "Import-VisualStudioVars 2017 amd64"
 
 powershell refreshenv
 
-powershell "cl"
+powershell "Import-VisualStudioVars 2017 amd64 and cl"
 
 choco install buck
 
