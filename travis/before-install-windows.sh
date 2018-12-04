@@ -1,5 +1,9 @@
 #!/bin/bash
-powershell '$VSAPPIDDIR..\Tools\vsdevcmd\ext\vcvars.bat amd64'
+echo $VSAPPIDDIR
+
+powershell "echo %VSAPPIDDIR%"
+
+powershell "$VSAPPIDDIR/Tools/vsdevcmd/ext/vcvars.bat amd64"
 
 powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
 powershell "Install-Module -Name PSCX -AllowClobber -Force"
