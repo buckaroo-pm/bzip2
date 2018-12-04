@@ -6,6 +6,8 @@ powershell "Import-VisualStudioVars 2017 amd64"
 
 powershell refreshenv
 
+powershell "cl"
+
 choco install buck
 
 powershell refreshenv
