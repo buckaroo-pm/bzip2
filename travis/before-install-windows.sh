@@ -1,4 +1,6 @@
 #!/bin/bash
+powershell "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64"
+
 powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
 powershell "Install-Module -Name PSCX -AllowClobber -Force"
 powershell "Install-Module -Name VSSetup -AllowClobber -Force"
@@ -6,7 +8,7 @@ powershell "Import-VisualStudioVars 2017 amd64"
 
 powershell refreshenv
 
-powershell "Import-VisualStudioVars 2017 amd64 and cl"
+powershell "cl"
 
 choco install buck
 
