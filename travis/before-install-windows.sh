@@ -1,5 +1,5 @@
 #!/bin/bash
-choco install visualstudio2017-workload-vctools 
+powershell "C:\Program Files\Microsoft Visual Studio 15.0\VC\bin\vcvars32.bat"
 
 powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
 powershell "Install-Module -Name PSCX -AllowClobber -Force"
