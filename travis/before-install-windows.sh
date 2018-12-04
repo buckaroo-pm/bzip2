@@ -1,5 +1,5 @@
 #!/bin/bash
-powershell "C:\Program Files\Microsoft Visual Studio 15.0\VC\bin\vcvars32.bat"
+powershell "%VSAPPIDDIR%..\Tools\vsdevcmd\ext\vcvars.bat amd64"
 
 powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
 powershell "Install-Module -Name PSCX -AllowClobber -Force"
