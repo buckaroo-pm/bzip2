@@ -19,7 +19,6 @@ jdk:
   - openjdk8
 
 os:
-  - windows
   - linux
   - osx
 
@@ -29,9 +28,4 @@ before_install:
  - ./travis/before-install-$TRAVIS_OS_NAME.sh
 
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then export JAVA_HOME="/c/Program Files/Java/jdk1.8.0_191"                            ; fi
-  - echo $PATH
-  - echo $JAVA_HOME
-  - 
-  - if [[ "$TRAVIS_OS_NAME" != "windows" ]]; then buck build -c ui.superconsole=DISABLED :bzip2                                    ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then buck build --config-file .buckconfig.windows -c ui.superconsole=DISABLED :bzip2  ; fi
+  - buck build -c ui.superconsole=DISABLED :bzip2

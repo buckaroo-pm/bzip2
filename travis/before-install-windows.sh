@@ -1,5 +1,4 @@
 #!/bin/bash
-# powershell "C:\Program Files\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64"
 
 powershell "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
 powershell "Install-Module -Name PSCX -AllowClobber -Force"
@@ -8,11 +7,6 @@ powershell "Import-VisualStudioVars 2017 amd64"
 
 powershell refreshenv
 
-# cl
-
-# powershell "cl"
-
-choco install mingw
 choco install buck
 
 powershell refreshenv
@@ -22,6 +16,3 @@ export JAVA_HOME="/c/Program Files/Java/jdk1.8.0_191"
 
 java -version
 buck --version
-
-which mingw
-which mingw64
